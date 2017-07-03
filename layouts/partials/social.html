@@ -1,5 +1,9 @@
 <div class="social">
   <ul class="social-links">
+    {{ if .Site.Params.Social.facebook }}
+      <li><a href="http://facebook.com/{{ .Site.Params.Social.facebook }}"><i class="fa fa-facebook"></i></a></li>
+    {{ end }}
+
     {{ if .Site.Params.Social.Github }}
       <li><a href="http://github.com/{{ .Site.Params.Social.Github }}"><i class="fa fa-github"></i></a></li>
     {{ end }}
@@ -16,8 +20,8 @@
       <li><a href="http://linkedin.com/in/{{ .Site.Params.Social.LinkedIn }}"><i class="fa fa-linkedin"></i></a></li>
     {{ end }}
 
-    {{ if .Site.Params.Social.Stackoverflow }}
+    <!-- {{ if .Site.Params.Social.Stackoverflow }}
       <li><a href="http://stackoverflow.com/{{ .Site.Params.Social.Stackoverflow }}"><i class="fa fa-stack-overflow"></i></a></li>
-    {{ end }}
+    {{ end }} -->
   </ul>
 </div>
